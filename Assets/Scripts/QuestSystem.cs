@@ -74,6 +74,7 @@ public class QuestSystem: MonoBehaviour
 
         currentStage = GetComponent<GameManager>().GetStage();
         nbObjectivesAchieved = 0;
+        nbObjectivesToAchieve = 0;
         actions = new List<string>();
         targets = new List<string>();
         xps = new List<string>();
@@ -84,6 +85,7 @@ public class QuestSystem: MonoBehaviour
         DisplayQuestInfo();
     }
 
+    /*
     public void LoadQuest()
     {
 
@@ -120,6 +122,7 @@ public class QuestSystem: MonoBehaviour
             }
         }
     }
+    */
 
     public void LoadQuest2()
     {
@@ -167,10 +170,10 @@ public class QuestSystem: MonoBehaviour
                         targets.Add(target);
                         xps.Add(xp);
                         objectiveAchieved.Add(false);
-                        //print(action + " " + target + "[" + xp + " XP]");
+                        print(action + " " + target + "[" + xp + " XP]");
                         stageObjectives += "\n -> " + action + " " + target + " [ " + xp + " XP]";
                         nbObjectivesToAchieve++;
-
+                        print(nbObjectivesToAchieve);
                     }
                 }
             }
@@ -226,6 +229,7 @@ public class QuestSystem: MonoBehaviour
             {
                 DisplayMessage("+" + xps[i] + " XP");
                 nbObjectivesAchieved++;
+                print(nbObjectivesAchieved);
                 XPAchieved += Int32.Parse(xps[i]);
                 objectiveAchieved[i] = true;
             }
@@ -238,6 +242,7 @@ public class QuestSystem: MonoBehaviour
             Invoke("StageComplete", 2);
 
         }
+
 
     }
 
@@ -271,6 +276,7 @@ public class QuestSystem: MonoBehaviour
         else
         {
             SceneManager.LoadScene("endScreen");
+            Destroy(gameObject);
         }
 
         //SceneManager.LoadScene("levelComplete");

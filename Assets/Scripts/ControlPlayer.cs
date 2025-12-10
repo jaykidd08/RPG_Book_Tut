@@ -51,7 +51,7 @@ public class ControlPlayer : MonoBehaviour
 
             //Player Movement
             speed = Input.GetAxis("Vertical") * 4;
-            rotationAroundY = Input.GetAxis("Horizontal") * 0.5f;
+            rotationAroundY = Input.GetAxis("Horizontal") * 4f;
             anim.SetFloat("speed", speed);
             gameObject.transform.Rotate(0, rotationAroundY, 0);
             if (speed > 0)

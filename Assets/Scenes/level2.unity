@@ -415,7 +415,7 @@ Transform:
   m_GameObject: {fileID: 983148567}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.6, z: 0}
+  m_LocalPosition: {x: -2.5, y: 0.6, z: -2.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -562,7 +562,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GenerateMaze
   width: 5
-  heigth: 5
+  height: 5
   wallSize: 5
   verticalWall: {fileID: 175728425957821270, guid: 8c7c1100989b88849814b4e2bc1b3e6c, type: 3}
   horizontalWall: {fileID: 1969332915315304276, guid: c861f2af1689dd844b48c55459dc37e7, type: 3}
@@ -578,7 +578,7 @@ Transform:
   m_GameObject: {fileID: 2058170395}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.0911, y: 0.5, z: -0.60586}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

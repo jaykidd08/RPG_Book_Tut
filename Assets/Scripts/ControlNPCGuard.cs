@@ -78,10 +78,10 @@ public class ControlNPCGuard : MonoBehaviour
                 wayPointIndex++;
             }
 
-                if (wayPointIndex > wayPoints.Count + 1)
-                {
+            if (wayPointIndex > wayPoints.Count - 1)
+            {
                     wayPointIndex = 0;
-                }
+            }
 
             GetComponent<NavMeshAgent>().SetDestination(wayPoints[wayPointIndex].transform.position);
         }
@@ -152,6 +152,7 @@ public class ControlNPCGuard : MonoBehaviour
         anim.SetBool("isIdleGuard", false);
         anim.SetBool("isPatrolGuard", false);
         anim.SetBool("isChaserGuard", false);
+
         switch (guardType)
         {
             case GUARD_TYPE.IDLE: anim.SetBool("isIdleGuard", true);

@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 using System.Collections.Generic;
 using UnityEngine.Rendering;
 using TMPro;
+//using UnityEditor.SearchService;
 
 public class QuestSystem: MonoBehaviour
 {
@@ -173,7 +174,7 @@ public class QuestSystem: MonoBehaviour
                         print(action + " " + target + "[" + xp + " XP]");
                         stageObjectives += "\n -> " + action + " " + target + " [ " + xp + " XP]";
                         nbObjectivesToAchieve++;
-                        print(nbObjectivesToAchieve);
+                        //print(nbObjectivesToAchieve);
                     }
                 }
             }
@@ -193,7 +194,7 @@ public class QuestSystem: MonoBehaviour
             p.transform.position = GameObject.Find("startingPoint").transform.position;
             p.transform.parent = gameObject.transform;
         }
-        else
+        else if (SceneManager.GetActiveScene().name == "level2" || SceneManager.GetActiveScene().name == "level3")
         {
 
             p = GameObject.Find("Player");
@@ -222,16 +223,17 @@ public class QuestSystem: MonoBehaviour
     public void Notify(possibleActions action, string target)
     {
 
-        //print("Notified: Action=" + action + " Target:" + target);
+        print("Notified: Action=" + action + " Target:" + target);
         for (int i = 0; i < actionsForQuest.Count; i++)
         {
             if (action == actionsForQuest[i] && target == targets[i] && !objectiveAchieved[i])
             {
                 DisplayMessage("+" + xps[i] + " XP");
                 nbObjectivesAchieved++;
-                print(nbObjectivesAchieved);
+                //print(nbObjectivesAchieved);
                 XPAchieved += Int32.Parse(xps[i]);
                 objectiveAchieved[i] = true;
+                break;
             }
         }
 

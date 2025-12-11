@@ -188,6 +188,7 @@ MonoBehaviour:
   anim: {fileID: 0}
   guardType: 0
   player: {fileID: 447878315064740453, guid: 9f9ee85c8a6eb2a4fa655169a5d66565, type: 3}
+  canHearPlayer: 1
 --- !u!195 &1471867988441585472
 NavMeshAgent:
   m_ObjectHideFlags: 0

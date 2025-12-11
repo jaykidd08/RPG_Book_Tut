@@ -84,4 +84,24 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(nextScene);
 
     }
+
+    /*
+    void OnEnable()
+    {
+
+            SceneManager.sceneLoaded += OnSceneLoaded;
+        
+
+    }
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        if (GetStage() > 0)
+        {
+            if (gameObject != null)
+            {
+                GetComponent<QuestSystem>().MovePlayerToStartingPoint();
+            }
+        }
+    }
+    */
 }
